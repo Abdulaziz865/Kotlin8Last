@@ -53,13 +53,8 @@ class RecyclerFragment : Fragment(), OnItemClickListener {
     }
 
     private fun addData() {
-        setFragmentResultListener("back")
-        { requestKey, result ->
-            if (requestKey == "back") {
-                model = result.getSerializable("OK") as RecyclerModel?
-                model?.let { list?.add(it) }
-                adapter.setData(list)
-            }
+        arguments.let {
+            adapter.setData2(it?.getSerializable("OK") as RecyclerModel)
         }
     }
 

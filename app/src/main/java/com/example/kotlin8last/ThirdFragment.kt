@@ -51,9 +51,7 @@ class ThirdFragment : Fragment() {
             } else {
                 val model = RecyclerModel(url, name, age.toInt(), family)
                 bundle.putSerializable("OK", model)
-                setFragmentResult("back", bundle)
-//                findNavController().navigate(R.id.action_thirdFragment_to_recyclerFragment,bundle)
-                findNavController().popBackStack()
+            findNavController().navigate(R.id.action_thirdFragment_to_recyclerFragment,bundle)
             }
         }
     }
