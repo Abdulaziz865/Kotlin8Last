@@ -54,5 +54,4 @@ class RecyclerAdapter(onItemClickListener: OnItemClickListener) :
             itemView.tag = celebrities
         }
     }
-
 }

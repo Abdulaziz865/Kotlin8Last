@@ -16,9 +16,7 @@
         <action
             android:id="@+id/action_recyclerFragment_to_detailFragment"
             app:destination="@id/detailFragment" />
-        <argument
-            android:name="MyArgs"
-            app:argType="com.example.kotlin8.RecyclerModel" />
+        />
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
