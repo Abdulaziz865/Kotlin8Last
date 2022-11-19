@@ -13,8 +13,8 @@ class RecyclerAdapter(onItemClickListener: OnItemClickListener) :
     private var list: MutableList<RecyclerModel>? = null
     private val onItemClickListener: OnItemClickListener
 
-    fun setData(listCelebrity: MutableList<RecyclerModel>?) {
-        this.list = listCelebrity
+    fun setData(listCharacters: MutableList<RecyclerModel>?) {
+        this.list = listCharacters
         notifyDataSetChanged()
     }
 
@@ -48,12 +48,12 @@ class RecyclerAdapter(onItemClickListener: OnItemClickListener) :
 
     class ViewHolder(private val binding: ItemNameBinding) : RecyclerView.ViewHolder(binding.root) {
 
-        fun onBind(celebrities: RecyclerModel) {
-            Glide.with(binding.ivImage.context).load(celebrities.imageUrl).into(binding.ivImage)
-            binding.tvName.text = celebrities.name
-            binding.tvAge.text = celebrities.age.toString()
-            binding.tvFamily.text = celebrities.family
-            itemView.tag = celebrities
+        fun onBind(characters: RecyclerModel) {
+            Glide.with(binding.ivImage.context).load(characters.imageUrl).into(binding.ivImage)
+            binding.tvName.text = characters.name
+            binding.tvAge.text = characters.age.toString()
+            binding.tvFamily.text = characters.family
+            itemView.tag = characters
         }
     }
 }

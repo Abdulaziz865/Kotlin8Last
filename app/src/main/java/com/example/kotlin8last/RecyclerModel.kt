@@ -2,7 +2,7 @@ package com.example.kotlin8last
 
 import java.io.Serializable
 
-class RecyclerModel(
+data class RecyclerModel(
 
     var imageUrl: String,
     var name: String,

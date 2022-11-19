@@ -28,7 +28,7 @@ class RecyclerFragment : Fragment(), OnItemClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        list = repository.getListOfCelebrities()
+        list = repository.getListOfCharacters()
         adapter.setData(list)
         initialize()
         setOnClickListener()
